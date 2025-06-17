@@ -39,7 +39,7 @@ exports.loginUser = async (req, res) => {
     res.json({ 
       message: 'You have logged in successfully!', 
       token: generateToken(user._id),
-      name: user.fullName, // This goes into localStorage
+      name: user.fullName, 
       email: user.email  
     });
   } catch (error) {
