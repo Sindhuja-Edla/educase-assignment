@@ -9,7 +9,11 @@ dotenv.config();
 const app = express();
 
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://educase-assignment1-7x5i.vercel.app', // Your frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
 app.use(express.json());
 
 
